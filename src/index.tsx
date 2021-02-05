@@ -1,17 +1,70 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import styled from "styled-components";
+import {colors} from "./colors";
+import {breakpoints} from "./breakpoints";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+export const Button = styled.button`
+    cursor: pointer;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    border-radius: 5rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    border: 3px solid;
+    font-size: 1rem;
+    line-height: 1;
+    background: none;
+    color: ${colors.primaryDarkBlue};
+    border-color: ${colors.primaryDarkBlue};
+    @media (min-width: ${breakpoints.tablet}px) {
+        padding: 0.5rem 1.25rem;
+    }
+    :focus, :active {
+        background: ${colors.secondaryPurple};
+        color: ${colors.primaryPurple};
+        border-color: ${colors.primaryPurple};
+        outline: none;
+        box-shadow: 0 0 0 3px ${colors.infoYellow};
+    }
+    :disabled {
+        color: ${colors.inactiveGrey};
+        border-color: ${colors.inactiveGrey};
+        background: ${colors.primaryWhite};
+    }
+`;
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+export const PrimaryButton = styled(Button)`
+    color: ${colors.primaryWhite};
+    background: ${colors.primaryPurple};
+    border-color: ${colors.primaryPurple};
+    :not(:disabled) {
+        :hover {
+            background: ${colors.secondaryPurple};
+            color: ${colors.primaryPurple};
+            border-color: ${colors.primaryPurple};
+        }
+    }
+`
+
+export const SecondaryButton = styled(Button)`
+    color: ${colors.primaryPurple};
+    background: ${colors.primaryWhite};
+    border-color: ${colors.primaryPurple};
+    :not(:disabled) {
+        :hover {
+            background: ${colors.primaryPurple};
+            color: ${colors.primaryWhite};
+            border-color: ${colors.primaryPurple};
+        }
+    }
+`
+
+export const TertiaryButton = styled(Button)`
+    color: ${colors.primaryPurple};
+    background: transparent;
+    border-color: transparent;
+    :not(:disabled) {
+        :hover {
+            border-color: ${colors.primaryPurple};
+        }
+    }
+`
