@@ -1,12 +1,17 @@
 # pam-buttons
 
-Button component used on arbeidsplassen.no
+Button component used on arbeidsplassen.nav.no
 
 ## Get started
+
 `npm i pam-buttons`
 
 ## Use
 
 ```tsx
-<Button>OK</Button>
+import {PrimaryButton, SecondaryButton, TertiaryButton} from "pam-buttons";
+
+<PrimaryButton>This is a primary button</PrimaryButton>
+<SecondaryButton>Dette er en secondary button</SecondaryButton>
+<TertiaryButton>Dette er en tertiary button</TertiaryButton>
 ```
