@@ -4,12 +4,19 @@ Button component used on arbeidsplassen.nav.no
 
 ## Get started
 
-`npm i pam-buttons`
+> The library is not yet available on npm, but for now it can be tested by installing
+> from Github
+
+<code>
+    <del>npm i pam-buttons</del>
+</code>
+
+`npm i https://github.com/navikt/pam-buttons.git`
 
 ## Use
 
-These components depend on a theme being provided through props. This can be achieved
-by using the `ThemeProvider` from styled-components.
+These components depend on a theme being provided through props. This can be achieved by using the `ThemeProvider` from
+styled-components.
 
 ### Theming
 
