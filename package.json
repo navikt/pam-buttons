@@ -2,7 +2,7 @@
   "name": "pam-buttons",
   "description": "Buttons used on arbeidsplassen.nav.no",
   "author": "Jonas Lundeland",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "main": "./dist/index.js",
   "repository": {
