@@ -5,7 +5,12 @@
   "private": false,
   "main": "./dist/index.js",
   "devDependencies": {
+    "@storybook/react": "^6.1.17",
     "@types/styled-components": "^5.1.7",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "rimraf": "^3.0.2",
     "styled-components": "^5.2.1",
     "ttypescript": "^1.5.12"
@@ -15,7 +20,8 @@
   },
   "scripts": {
     "prepare": "npm run build",
-    "build": "rimraf dist && ttsc"
+    "build": "rimraf dist && ttsc",
+    "storybook": "start-storybook -p 6006"
   },
   "browserslist": {
     "production": [

@@ -1,17 +1,16 @@
 import styled from "styled-components";
 import {colors} from "./colors";
 
-export const Button = styled.button`
+const Button = styled.button`
+  appearance: none;
   cursor: pointer;
   font-family: 'Source Sans Pro', Arial, sans-serif;
   border-radius: 5rem;
   font-weight: 600;
   padding: 0.5rem 1rem;
   white-space: nowrap;
-  border: 3px solid;
+  border: 3px solid ${colors.primaryDarkBlue};
   font-size: 1rem;
-  line-height: 1;
-  background: none;
   color: ${colors.primaryDarkBlue};
   border-color: ${colors.primaryDarkBlue};
 
