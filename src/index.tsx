@@ -1,70 +1,76 @@
 import styled from "styled-components";
-import {colors} from "./colors";
+import {Theme} from "./theme";
 
-const Button = styled.button`
-  appearance: none;
-  cursor: pointer;
-  font-family: 'Source Sans Pro', Arial, sans-serif;
-  border-radius: 5rem;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  white-space: nowrap;
-  border: 3px solid ${colors.primaryDarkBlue};
-  font-size: 1rem;
-  color: ${colors.primaryDarkBlue};
-  border-color: ${colors.primaryDarkBlue};
+interface ButtonProps {
+    theme: Theme
+}
 
-  :focus, :active {
-    background: ${colors.secondaryPurple};
-    color: ${colors.primaryPurple};
-    border-color: ${colors.primaryPurple};
-    outline: none;
-    box-shadow: 0 0 0 3px ${colors.infoYellow};
-  }
-
-  :disabled {
-    color: ${colors.inactiveGrey};
-    border-color: ${colors.inactiveGrey};
-    background: ${colors.primaryWhite};
-  }
+const Button = styled.button<ButtonProps>`
+  ${({theme}: ButtonProps) => `
+        appearance: none;
+        cursor: pointer;
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+        border-radius: 5rem;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+        border: 3px solid ${theme.colors.primaryDarkBlue};
+        font-size: 1rem;
+        color: ${theme.colors.primaryDarkBlue};
+        :focus, :active {
+            background: ${theme.colors.secondaryPurple};
+            color: ${theme.colors.primaryPurple};
+            border-color: ${theme.colors.primaryPurple};
+            box-shadow: 0 0 0 3px ${theme.colors.infoYellow};
+            outline: none;
+        }
+        :disabled {
+            color: ${theme.colors.inactiveGrey};
+            border-color: ${theme.colors.inactiveGrey};
+            background: ${theme.colors.primaryWhite};
+        }
+  `}
 `;
 
-export const PrimaryButton = styled(Button)`
-  color: ${colors.primaryWhite};
-  background: ${colors.primaryPurple};
-  border-color: ${colors.primaryPurple};
-
-  :not(:disabled) {
-    :hover {
-      background: ${colors.secondaryPurple};
-      color: ${colors.primaryPurple};
-      border-color: ${colors.primaryPurple};
-    }
-  }
+export const PrimaryButton = styled(Button)<ButtonProps>`
+  ${({theme}: ButtonProps) => `
+        color: ${theme.colors.primaryWhite};
+        background: ${theme.colors.primaryPurple};
+        border-color: ${theme.colors.primaryPurple};
+        :not(:disabled) {
+            :hover {
+              background: ${theme.colors.secondaryPurple};
+              color: ${theme.colors.primaryPurple};
+              border-color: ${theme.colors.primaryPurple};
+            }
+        }
+  `}
 `
 
-export const SecondaryButton = styled(Button)`
-  color: ${colors.primaryPurple};
-  background: ${colors.primaryWhite};
-  border-color: ${colors.primaryPurple};
-
-  :not(:disabled) {
-    :hover {
-      background: ${colors.primaryPurple};
-      color: ${colors.primaryWhite};
-      border-color: ${colors.primaryPurple};
-    }
-  }
+export const SecondaryButton = styled(Button)<ButtonProps>`
+  ${({theme}: ButtonProps) => `
+        color: ${theme.colors.primaryPurple};
+        background: ${theme.colors.primaryWhite};
+        border-color: ${theme.colors.primaryPurple};
+        :not(:disabled) {
+          :hover {
+            background: ${theme.colors.primaryPurple};
+            color: ${theme.colors.primaryWhite};
+            border-color: ${theme.colors.primaryPurple};
+          }
+        }
+    `}
 `
 
-export const TertiaryButton = styled(Button)`
-  color: ${colors.primaryPurple};
-  background: transparent;
-  border-color: transparent;
-
-  :not(:disabled) {
-    :hover {
-      border-color: ${colors.primaryPurple};
-    }
-  }
+export const TertiaryButton = styled(Button)<ButtonProps>`
+  ${({theme}: ButtonProps) => `
+        color: ${theme.colors.primaryPurple};
+        background: transparent;
+        border-color: transparent;
+        :not(:disabled) {
+          :hover {
+            border-color: ${theme.colors.primaryPurple};
+          }
+        }
+    `}
 `

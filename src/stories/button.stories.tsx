@@ -1,14 +1,23 @@
-import React from 'react'
 import {storiesOf} from '@storybook/react'
 import {PrimaryButton, SecondaryButton, TertiaryButton} from "../index"
+import * as React from "react";
 
 storiesOf('Button', module)
     .add('primary', () => (
-        <PrimaryButton>Dette er en primary button</PrimaryButton>
+        <PrimaryButton>Primary</PrimaryButton>
+    ))
+    .add('primary:disabled', () => (
+        <PrimaryButton disabled>Inactive Primary</PrimaryButton>
     ))
     .add('secondary', () => (
-        <SecondaryButton>Dette er en secondary button</SecondaryButton>
+        <SecondaryButton>Secondary</SecondaryButton>
+    ))
+    .add('secondary:disabled', () => (
+        <SecondaryButton disabled>Disabled Secondary</SecondaryButton>
     ))
     .add('tertiary', () => (
-        <TertiaryButton>Dette er en tertiary button</TertiaryButton>
+        <TertiaryButton>Tertiary</TertiaryButton>
+    ))
+    .add('tertiary:disabled', () => (
+        <TertiaryButton disabled>Tertiary Disabled</TertiaryButton>
     ))
