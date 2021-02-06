@@ -1,9 +1,21 @@
 {
   "name": "pam-buttons",
+  "description": "Buttons used on arbeidsplassen.nav.no",
   "author": "Jonas Lundeland",
   "version": "0.1.0",
   "private": false,
   "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/navikt/pam-buttons.git"
+  },
+  "homepage": "https://github.com/navikt/pam-buttons",
+  "bugs": {
+    "url": "https://github.com/navikt/pam-buttons/issues"
+  },
+  "keywords": [
+    "styled-components"
+  ],
   "devDependencies": {
     "@storybook/react": "^6.1.17",
     "@types/styled-components": "^5.1.7",
