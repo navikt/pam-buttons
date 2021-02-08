@@ -1,6 +1,6 @@
 {
   "name": "pam-buttons",
-  "description": "Buttons used on arbeidsplassen.nav.no",
+  "description": "Buttons used on https://arbeidsplassen.nav.no",
   "author": "Jonas Lundeland",
   "version": "0.1.1",
   "private": false,
@@ -36,12 +36,5 @@
     "build": "rimraf dist && ttsc",
     "storybook": "start-storybook -p 6006",
     "deploy-storybook": "storybook-to-ghpages"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ]
   }
 }
