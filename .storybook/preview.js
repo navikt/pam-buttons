@@ -1,10 +1,15 @@
 import {ThemeProvider} from "styled-components";
 import {Theme} from "../src/theme";
 import * as React from "react";
+import {config, withDesign} from "storybook-addon-designs";
 
 export const parameters = {
     actions: {argTypesRegex: "^on[A-Z].*"},
-    layout: 'fullscreen'
+    layout: 'fullscreen',
+    design: config({
+        type: 'figma',
+        url: 'https://www.figma.com/file/pPVBT8fBTXKW01vTIWvlit/Styleguide-for-arbeidsplassen?node-id=993%3A347'
+    })
 }
 
 const theme: Theme = {
@@ -19,6 +24,7 @@ const theme: Theme = {
 }
 
 export const decorators = [
+    withDesign,
     (Story) => (
         <ThemeProvider theme={theme}>
             <Story/>
