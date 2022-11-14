@@ -17,7 +17,7 @@
     "styled-components"
   ],
   "devDependencies": {
-    "@storybook/react": "^6.1.17",
+    "@storybook/react": "^6.5.13",
     "@storybook/storybook-deployer": "^2.8.7",
     "@types/styled-components": "^5.1.7",
     "babel-core": "^6.26.3",
